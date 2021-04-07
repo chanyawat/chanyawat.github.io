@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}Quiz บทที่ 6{% endblock %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{{url_for('index')}}">หน้าแรก</a></li>
+<li class="breadcrumb-item"><a href="{{url_for('lessons')}}">เอกสารประกอบการเรียน</a></li>
+<li class="breadcrumb-item active" aria-current="page">Quiz บทที่ 6</a></li>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1>Quiz บทที่ 6</h1>
+
+  <br>
+
+  <div class="accordion" id="accordionExample">
+
+    <!-- Quiz No.1 -->
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Quiz No.1
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>จงแทนประโยค / วลีต่อไปนี้ในรูปประโยคเดี่ยวของตรรกศาสตร์อันดับหนึ่ง</p>
+          <ol>
+            <li>Snoopy is a dog.</li>
+            <li>Dumbledore, the wizard.</li>
+            <li>The cat named Garfield.</li>
+            <li>Saruman is Gandalf’s enemy.</li>
+            <li>Arwen, a daughter of Elrond.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz No.2 -->
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            Quiz No.2
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>จงแทนประโยค “All Germans speak the same language.” เป็นตรรกศาสตร์อันดับหนึ่ง ให้ใช้เพรดิเคต \(Speaks(x, l)\) โดยหมายถึง "บุคคล \(x\) พูดภาษา \(l\)" </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz No.3 -->
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Quiz No.3
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>จงแทนประโยคต่อไปนี้ด้วยตรรกศาสตร์อันดับหนึ่ง กำหนดชื่อเพรดิเคตต่าง ๆ และใช้ตัวบ่งปริมาณให้เหมาะสม มีความหมาย และมีความเป็นทั่วไปที่จะนำไปใช้ในข้ออื่นที่เป็นเรื่องราวเดียวกันได้โดยไม่ต้องตั้งชื่อใหม่</p>
+          <ol>
+            <li>Every Air Cadet is smart.</li>
+            <li>All men are mortal.</li>
+            <li>There is a laundry girl who does the laundry for all Air Cadets who do not do the laundry themselves.</li>
+            <li>Whoever goes to Minas Tirith means he goes to Gondor.</li>
+            <li>A person born in the UK, each of whose parents is a UK citizen or a UK resident, is a UK citizen by birth.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+
+{% endblock %}

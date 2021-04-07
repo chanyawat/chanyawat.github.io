@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Quiz บทที่ 3{% endblock %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{{url_for('index')}}">หน้าแรก</a></li>
+<li class="breadcrumb-item"><a href="{{url_for('lessons')}}">เอกสารประกอบการเรียน</a></li>
+<li class="breadcrumb-item active" aria-current="page">Quiz บทที่ 3</a></li>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1>Quiz บทที่ 3</h1>
+
+  <br>
+
+  <div class="accordion" id="accordionExample">
+
+    <!-- Quiz No.1 -->
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Quiz No.1
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>จงกำหนดสถานะเริ่มต้น (Initial state), การทดสอบเป้าหมาย (Goal test), Successor function และ 
+            Path cost function ให้กับปัญหาในข้อต่อไปนี้</p>
+          <ol>
+            <li>ปัญหาการลงสีในแผนที่โดยใช้สีเพียง 4 สี สมมุติว่าอาณาจักรแห่งหนึ่งประกอบด้วยแคว้นเล็กแคว้นน้อยจำนวนหนึ่ง 
+              ต้องการระบายสีในแผนที่ให้แคว้นที่อยู่ติดกันมีสีต่างกัน และสมมติว่าไม่มีแคว้นใดมีอาณาเขตอยู่ติดกันเกินกว่า 4 แคว้น</li>
+            <li>ปัญหาลิงกับกล้วย มีลิงสูง 3 ฟุต อยู่ในห้องที่มีกล้วยแขวนติดเพดานสูง 8 ฟุต ลิงต้องการกินกล้วยหวีนี้ 
+              ในห้องมีกล่องสูง 3 ฟุตที่ซ้อนกันได้ เคลื่อนที่ได้ และปีนได้ จำนวน 2 กล่อง</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz No.2 -->
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Quiz No.2
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <img src="{{url_for('static',filename='quiz_chap3_no2.png')}}" class="mx-auto d-block" alt="" width="500" height="300px">
+          <p>จากแผนภาพ กำหนดให้สถานะเริ่มต้นที่ S สถานะเป้าหมายคือ M จงแสดงขั้นตอนการค้นหาตามลำดับ 
+            โดยใช้แผนภาพต้นไม้ทีละขั้นโดยละเอียด ใช้วิธีการค้นหาแบบ</p>
+          <ol>
+            <li>Breadth-first search</li>
+            <li>Depth-first search</li>
+            <li>Iterative deepening search</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+
+{% endblock %}
