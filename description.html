@@ -1,23 +1,112 @@
-{% extends 'base.html' %}
-
-{% block title %}คำอธิบายรายวิชา{% endblock %}
-
-{% block breadcrumb %}
-<li class="breadcrumb-item"><a href="{{url_for('index')}}">หน้าแรก</a></li>
-<li class="breadcrumb-item"><a href="#">ข้อมูลอื่น ๆ</a></li>
-<li class="breadcrumb-item active" aria-current="page">คำอธิบายรายวิชา</li>
-{% endblock %}
-
-{% block content %}
-
-<div class="container">
-  <h1>คำอธิบายรายวิชา</h1>
-
-  <br>
-
-  <h4>แนวความคิดและหลักการขั้นพื้นฐานของระบบปัญญาประดิษฐ์ เทคนิคที่ใช้ในงาน ด้านปัญญาประดิษฐ์ <br> การแทนส่งที่เรียนรู้ลงในคอมพิวเตอร์ การแปลความหมายของสิ่งที่เรียนรู้เหล่านั้น การใช้เหตุผล
-  <br> โดยอาศัยกฎในฐานความรู้ ความไม่แน่นอนในระบบการใช้ฐานความรู้ เทคนิคการค้นหาแบบฮิวริสติก</h4>
-</div>
+<!DOCTYPE html>
+<html lang="en">
   
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลอื่น ๆ - CS 437 Artificial Intelligence || คต 437 ปัญญาประดิษฐ์</title>
 
-{% endblock %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </head>
+
+  <body>
+
+    
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <!-- TYPICALLY WE HAVE A BRAND LINK -->
+        <a class="navbar-brand" href="https://nkrafa.rtaf.mi.th/" target="_blank">
+          <img src="/static/brand.png" width="230" height="100" alt="">
+        </a>
+  
+        <!-- THIS SETS UP THE COLLAPSABLE BUTTON ELEMENT (HAMBURGER) -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+  
+      <!-- THEN WE PUT AN UNORDERED LIST INSIDE OF A COLLAPSE DIV -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+  
+        <ul class="navbar-nav mr-auto">
+  
+        <!-- EVERY ITEM IN NAVBAR IS JUST A LIST ITEM -->
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html"><font size="4">หน้าแรก</font></a>
+          </li>
+  
+          <!-- HERE IS ANOTHER ONE, BUT THE LINK DOESNT "LOOK" ACTIVE -->
+          <li class="nav-item">
+            <a class="nav-link text-white" href="lessons.html"><font size="4">เอกสารประกอบการเรียน</font></a>
+          </li>
+  
+  
+          <!-- WE CAN ALSO CREATE DROPDOWN MENUS -->
+          <li class="nav-item dropdown">
+  
+            <!-- TOP LEVEL DROPDOWN -->
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <font size="4">ข้อมูลอื่น ๆ</font>
+            </a>
+  
+            <!-- ONE DIVISION IN THE DROPDOWN -->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="description.html">คำอธิบายรายวิชา</a>
+              <a class="dropdown-item" href="eval.html">การวัดและประเมินผล</a>
+  
+              <!-- ANOTHER DIVISION IN THE DROPDOWN -->
+            <!-- <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div> -->
+  
+          </li>
+  
+        </ul>
+
+        <button type="button" class="btn btn-success">Demo</button>
+  
+      </div>
+    </nav>
+
+    <style>
+      body {
+        background-image: url('/static/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      </style>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{url_for('index')}}">หน้าแรก</a></li>
+        <li class="breadcrumb-item"><a href="#">ข้อมูลอื่น ๆ</a></li>
+        <li class="breadcrumb-item active" aria-current="page">คำอธิบายรายวิชา</li>
+      </ol>
+    </nav>
+
+    <div class="container">
+      <h1>คำอธิบายรายวิชา</h1>
+    
+      <br>
+    
+      <h4>แนวความคิดและหลักการขั้นพื้นฐานของระบบปัญญาประดิษฐ์ เทคนิคที่ใช้ในงาน ด้านปัญญาประดิษฐ์ <br> การแทนส่งที่เรียนรู้ลงในคอมพิวเตอร์ การแปลความหมายของสิ่งที่เรียนรู้เหล่านั้น การใช้เหตุผล
+      <br> โดยอาศัยกฎในฐานความรู้ ความไม่แน่นอนในระบบการใช้ฐานความรู้ เทคนิคการค้นหาแบบฮิวริสติก</h4>
+    </div>
+    
+
+  </body>
+
+</html>
