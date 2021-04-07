@@ -1,150 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เอกสารประกอบการเรียน - CS 437 Artificial Intelligence || คต 437 ปัญญาประดิษฐ์</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  </head>
+
+  <body>
+
+    
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <!-- TYPICALLY WE HAVE A BRAND LINK -->
+        <a class="navbar-brand" href="https://nkrafa.rtaf.mi.th/" target="_blank">
+          <img src="/static/brand.png" width="230" height="100" alt="">
+        </a>
+  
+        <!-- THIS SETS UP THE COLLAPSABLE BUTTON ELEMENT (HAMBURGER) -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+  
+      <!-- THEN WE PUT AN UNORDERED LIST INSIDE OF A COLLAPSE DIV -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+  
+        <ul class="navbar-nav mr-auto">
+  
+        <!-- EVERY ITEM IN NAVBAR IS JUST A LIST ITEM -->
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html"><font size="4">หน้าแรก</font></a>
+          </li>
+  
+          <!-- HERE IS ANOTHER ONE, BUT THE LINK DOESNT "LOOK" ACTIVE -->
+          <li class="nav-item">
+            <a class="nav-link text-white" href="lessons.html"><font size="4">เอกสารประกอบการเรียน</font></a>
+          </li>
+  
+  
+          <!-- WE CAN ALSO CREATE DROPDOWN MENUS -->
+          <li class="nav-item dropdown">
+  
+            <!-- TOP LEVEL DROPDOWN -->
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <font size="4">ข้อมูลอื่น ๆ</font>
+            </a>
+  
+            <!-- ONE DIVISION IN THE DROPDOWN -->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="description.html">คำอธิบายรายวิชา</a>
+              <a class="dropdown-item" href="eval.html">การวัดและประเมินผล</a>
+  
+              <!-- ANOTHER DIVISION IN THE DROPDOWN -->
+            <!-- <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div> -->
+  
+          </li>
+  
+        </ul>
+
+        <button type="button" class="btn btn-success">Demo</button>
+  
+      </div>
+    </nav>
+
+    <style>
+      body {
+        background-image: url('/static/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      </style>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">หน้าแรก</a></li>
+        <li class="breadcrumb-item active" aria-current="page">เอกสารประกอบการเรียน</a></li>
+      </ol>
+    </nav>
+
+    <div class="container">
+      <h1>เอกสารประกอบการเรียน</h1>
+    
+      <br>
+    
+      <!-- บทที่ 1 - 3 -->
+      <div class="row row justify-content-center">
+        <div class="col-4">
+          <div class="card border-dark" style="width: 20rem;">
+            <img src="/static/icon1.jpg" class="card-img-top" alt="..." width="20px" height="150px">
+              <div class="card-body">
+                  <h5 class="card-title">บทที่ 1</h5>
+                  <p class="card-text">บทนำ (Introduction)</p>
+                  <br>
+                  <a href="/static/chap1.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                    Download
+                  </a>
+                  <a href="{{url_for('quiz_chap1')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-4">
+            <div class="card border-dark" style="width: 20rem;">
+              <img src="{{url_for('static',filename='icon2.png')}}" class="card-img-top" alt="..." width="20px" height="150px">
+                <div class="card-body">
+                    <h5 class="card-title">บทที่ 2</h5>
+                    <p class="card-text">
+                        เอเยนต์ฉลาด (Intelligent Agents)
+                    </p>
+                    <br>
+                    <a href="{{url_for('static',filename='chap2.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
+                        Download
+                    </a>
+                    <a href="{{url_for('quiz_chap2')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-dark" style="width: 20rem;">
+            <img src="{{url_for('static',filename='icon3.jpg')}}" class="card-img-top" alt="..." width="20px" height="150px">
+              <div class="card-body">
+                  <h5 class="card-title">บทที่ 3</h5>
+                  <p class="card-text">การแก้ปัญหาโดยวิธีค้นหา (Problem Solving by Searching)</p>
+                  <a href="{{url_for('static',filename='chap3.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
+                    Download
+                  </a>
+                  <a href="{{url_for('quiz_chap3')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    
+      <br>
+    
+      <!-- บทที่ 4 - 6 -->
+      <div class="row row justify-content-center">
+        <div class="col-4">
+            <div class="card border-dark" style="width: 20rem;">
+              <img src="{{url_for('static',filename='icon4.png')}}" class="card-img-top" alt="..." width="20px" height="150px">
+                <div class="card-body">
+                    <h5 class="card-title">บทที่ 4</h5>
+                    <p class="card-text">
+                        การค้นหาแบบใช้ข้อมูล (Informed Search)
+                    </p>
+                    <a href="{{url_for('static',filename='chap4.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
+                        Download
+                    </a>
+                    <a href="{{url_for('quiz_chap4')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+          <div class="card border-dark" style="width: 20rem;">
+            <img src="{{url_for('static',filename='icon5.png')}}" class="card-img-top" alt="..." width="20px" height="150px">
+              <div class="card-body">
+                  <h5 class="card-title">บทที่ 5</h5>
+                  <p class="card-text">เอเยนต์ตรรกะ (Logical Agents)</p>
+                  <br>
+                  <a href="{{url_for('static',filename='chap5.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
+                    Download
+                  </a>
+                  <a href="{{url_for('quiz_chap5')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-4">
+            <div class="card border-dark" style="width: 20rem;">
+                <div class="card-body">
+                  <img src="{{url_for('static',filename='icon6.png')}}" class="card-img-top" alt="..." width="20px" height="150px">
+                    <h5 class="card-title">บทที่ 6</h5>
+                    <p class="card-text">ตรรกศาสตร์อันดับหนึ่ง (First-Order Logic)</p>
+                    <br>
+                    <a href="{{url_for('static',filename='chap6.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
+                        Download
+                    </a>
+                    <a href="{{url_for('quiz_chap6')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+      <br>
+    
+      <!-- บทที่ 7 - 8 -->
+      <div class="row row justify-content-center">
+        <div class="col-4">
+          <div class="card border-dark" style="width: 20rem;">
+              <div class="card-body">
+                <img src="{{url_for('static',filename='icon7.jpg')}}" class="card-img-top" alt="..." width="20px" height="150px">
+                  <h5 class="card-title">บทที่ 7</h5>
+                  <p class="card-text">การสรุปความในตรรกศาสตร์อันดับหนึ่ง (Inference in First-Order Logic)</p>
+                  <a href="{{url_for('static',filename='chap7.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
+                    Download
+                  </a>
+                  <a href="{{url_for('quiz_chap7')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-4">
+            <div class="card border-dark" style="width: 20rem;">
+                <div class="card-body">
+                  <img src="{{url_for('static',filename='icon8.jpg')}}" class="card-img-top" alt="..." width="20px" height="150px">
+                    <h5 class="card-title">บทที่ 8</h5>
+                    <p class="card-text">การวางแผน (Planning)</p>
+                    <br>
+                    <a href="{{url_for('static',filename='chap8.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
+                        Download
+                    </a>
+                    <!-- <a href="#" class="btn btn-outline-danger btn-sm">Quiz</a> -->
+                </div>
+            </div>
+        </div>
+      </div>
+    
+    </div>
+    
+    <br>
+    
+
+  </body>
+
+</html>
+
+
+
+
+
+
+
 {% extends 'base.html' %}
 
-{% block title %}เอกสารประกอบการเรียน{% endblock %}
+{% block title %}{% endblock %}
 
 {% block breadcrumb %}
-<li class="breadcrumb-item"><a href="{{url_for('index')}}">หน้าแรก</a></li>
-<li class="breadcrumb-item active" aria-current="page">เอกสารประกอบการเรียน</a></li>
+
 {% endblock %}
 
 {% block content %}
 
-<div class="container">
-  <h1>เอกสารประกอบการเรียน</h1>
-
-  <br>
-
-  <!-- บทที่ 1 - 3 -->
-  <div class="row row justify-content-center">
-    <div class="col-4">
-      <div class="card border-dark" style="width: 20rem;">
-        <img src="{{url_for('static',filename='icon1.jpg')}}" class="card-img-top" alt="..." width="20px" height="150px">
-          <div class="card-body">
-              <h5 class="card-title">บทที่ 1</h5>
-              <p class="card-text">บทนำ (Introduction)</p>
-              <br>
-              <a href="{{url_for('static',filename='chap1.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
-                Download
-              </a>
-              <a href="{{url_for('quiz_chap1')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
-          </div>
-      </div>
-    </div>
-    <div class="col-4">
-        <div class="card border-dark" style="width: 20rem;">
-          <img src="{{url_for('static',filename='icon2.png')}}" class="card-img-top" alt="..." width="20px" height="150px">
-            <div class="card-body">
-                <h5 class="card-title">บทที่ 2</h5>
-                <p class="card-text">
-                    เอเยนต์ฉลาด (Intelligent Agents)
-                </p>
-                <br>
-                <a href="{{url_for('static',filename='chap2.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
-                    Download
-                </a>
-                <a href="{{url_for('quiz_chap2')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-4">
-      <div class="card border-dark" style="width: 20rem;">
-        <img src="{{url_for('static',filename='icon3.jpg')}}" class="card-img-top" alt="..." width="20px" height="150px">
-          <div class="card-body">
-              <h5 class="card-title">บทที่ 3</h5>
-              <p class="card-text">การแก้ปัญหาโดยวิธีค้นหา (Problem Solving by Searching)</p>
-              <a href="{{url_for('static',filename='chap3.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
-                Download
-              </a>
-              <a href="{{url_for('quiz_chap3')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
-          </div>
-      </div>
-    </div>
-  </div>
-
-  <br>
-
-  <!-- บทที่ 4 - 6 -->
-  <div class="row row justify-content-center">
-    <div class="col-4">
-        <div class="card border-dark" style="width: 20rem;">
-          <img src="{{url_for('static',filename='icon4.png')}}" class="card-img-top" alt="..." width="20px" height="150px">
-            <div class="card-body">
-                <h5 class="card-title">บทที่ 4</h5>
-                <p class="card-text">
-                    การค้นหาแบบใช้ข้อมูล (Informed Search)
-                </p>
-                <a href="{{url_for('static',filename='chap4.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
-                    Download
-                </a>
-                <a href="{{url_for('quiz_chap4')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-4">
-      <div class="card border-dark" style="width: 20rem;">
-        <img src="{{url_for('static',filename='icon5.png')}}" class="card-img-top" alt="..." width="20px" height="150px">
-          <div class="card-body">
-              <h5 class="card-title">บทที่ 5</h5>
-              <p class="card-text">เอเยนต์ตรรกะ (Logical Agents)</p>
-              <br>
-              <a href="{{url_for('static',filename='chap5.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
-                Download
-              </a>
-              <a href="{{url_for('quiz_chap5')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
-          </div>
-      </div>
-    </div>
-    <div class="col-4">
-        <div class="card border-dark" style="width: 20rem;">
-            <div class="card-body">
-              <img src="{{url_for('static',filename='icon6.png')}}" class="card-img-top" alt="..." width="20px" height="150px">
-                <h5 class="card-title">บทที่ 6</h5>
-                <p class="card-text">ตรรกศาสตร์อันดับหนึ่ง (First-Order Logic)</p>
-                <br>
-                <a href="{{url_for('static',filename='chap6.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
-                    Download
-                </a>
-                <a href="{{url_for('quiz_chap6')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
-            </div>
-        </div>
-    </div>
-  </div>
-
-  <br>
-
-  <!-- บทที่ 7 - 8 -->
-  <div class="row row justify-content-center">
-    <div class="col-4">
-      <div class="card border-dark" style="width: 20rem;">
-          <div class="card-body">
-            <img src="{{url_for('static',filename='icon7.jpg')}}" class="card-img-top" alt="..." width="20px" height="150px">
-              <h5 class="card-title">บทที่ 7</h5>
-              <p class="card-text">การสรุปความในตรรกศาสตร์อันดับหนึ่ง (Inference in First-Order Logic)</p>
-              <a href="{{url_for('static',filename='chap7.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
-                Download
-              </a>
-              <a href="{{url_for('quiz_chap7')}}" class="btn btn-outline-danger btn-sm">Quiz</a>
-          </div>
-      </div>
-    </div>
-    <div class="col-4">
-        <div class="card border-dark" style="width: 20rem;">
-            <div class="card-body">
-              <img src="{{url_for('static',filename='icon8.jpg')}}" class="card-img-top" alt="..." width="20px" height="150px">
-                <h5 class="card-title">บทที่ 8</h5>
-                <p class="card-text">การวางแผน (Planning)</p>
-                <br>
-                <a href="{{url_for('static',filename='chap8.pdf')}}" class="btn btn-outline-primary btn-sm" target="_blank">
-                    Download
-                </a>
-                <!-- <a href="#" class="btn btn-outline-danger btn-sm">Quiz</a> -->
-            </div>
-        </div>
-    </div>
-  </div>
-
-</div>
-
-<br>  
+  
 
 {% endblock %}
