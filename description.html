@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}คำอธิบายรายวิชา{% endblock %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{{url_for('index')}}">หน้าแรก</a></li>
+<li class="breadcrumb-item"><a href="#">ข้อมูลอื่น ๆ</a></li>
+<li class="breadcrumb-item active" aria-current="page">คำอธิบายรายวิชา</li>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1>คำอธิบายรายวิชา</h1>
+
+  <br>
+
+  <h4>แนวความคิดและหลักการขั้นพื้นฐานของระบบปัญญาประดิษฐ์ เทคนิคที่ใช้ในงาน ด้านปัญญาประดิษฐ์ <br> การแทนส่งที่เรียนรู้ลงในคอมพิวเตอร์ การแปลความหมายของสิ่งที่เรียนรู้เหล่านั้น การใช้เหตุผล
+  <br> โดยอาศัยกฎในฐานความรู้ ความไม่แน่นอนในระบบการใช้ฐานความรู้ เทคนิคการค้นหาแบบฮิวริสติก</h4>
+</div>
+  
+
+{% endblock %}

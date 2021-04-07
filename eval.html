@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}การวัดและประเมินผล{% endblock %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{{url_for('index')}}">หน้าแรก</a></li>
+<li class="breadcrumb-item"><a href="#">ข้อมูลอื่น ๆ</a></li>
+<li class="breadcrumb-item active" aria-current="page">การวัดและประเมินผล</li>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1>การวัดและประเมินผล</h1>
+
+  <br>
+
+  <div class="accordion" id="accordionExample">
+
+    <!-- คะแนนสอบ -->
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            คะแนนสอบ 70%
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>จงยกตัวอย่างการใช้แอพพลิเคชันที่อาศัยความสามารถในเรื่องต่อไปนี้ </p>
+          <ul>
+            <li>สอบกลางภาคต้น (Mid-Term) 25%</li>
+            <li>สอบประจำภาคต้น (Final)  50%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- คะแนนเก็บ -->
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            คะแนนเก็บ	30%
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <ul>
+            <li>การบ้าน 10%</li>
+            <li>งานกลุ่ม 10%</li>
+            <li>จิตพิสัย 10%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+
+{% endblock %}
