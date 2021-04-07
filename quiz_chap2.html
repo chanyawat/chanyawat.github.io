@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Quiz บทที่ 2{% endblock %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{{url_for('index')}}">หน้าแรก</a></li>
+<li class="breadcrumb-item"><a href="{{url_for('lessons')}}">เอกสารประกอบการเรียน</a></li>
+<li class="breadcrumb-item active" aria-current="page">Quiz บทที่ 2</a></li>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1>Quiz บทที่ 2</h1>
+
+  <br>
+
+  <div class="accordion" id="accordionExample">
+
+    <!-- Quiz No.1 -->
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Quiz No.1
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>เกณฑ์การวัดสมรรถนะ (Performance measures) และยูติลิตี้ฟังก์ชัน (Utility function) มีส่วนที่เหมือนกันคือ 
+            ต่างก็เป็นตัววัดว่าเอเยนต์ทำงานได้ดีเพียงใด แต่ทั้งสองก็มีข้อแตกต่างกัน จงอธิบายว่าข้อแตกต่างนี้คืออะไร</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz No.2 -->
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Quiz No.2
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>จงบรรยายการออกแบบ PEAS ของเอเยนต์ต่อไปนี้</p>
+          <ol>
+            <li>หุ่นยนต์เก็บตัวอย่างหินบนดาวอังคาร</li>
+            <li>เอเยนต์ร้านหนังสือในอินเทอร์เน็ต (Internet book-shopping agent)</li>
+            <li>หุ่นยนต์นักล่ากระต่าย จากเรื่องบั๊กส์บันนี่ กระต่ายแสนกล (จาก Quiz บทที่ 1)</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+
+{% endblock %}

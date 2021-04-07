@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}Quiz บทที่ 7{% endblock %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{{url_for('index')}}">หน้าแรก</a></li>
+<li class="breadcrumb-item"><a href="{{url_for('lessons')}}">เอกสารประกอบการเรียน</a></li>
+<li class="breadcrumb-item active" aria-current="page">Quiz บทที่ 7</a></li>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1>Quiz บทที่ 7</h1>
+
+  <br>
+
+  <div class="accordion" id="accordionExample">
+
+    <!-- Quiz No.1 -->
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Quiz No.1
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>จากประโยคเดี่ยวแต่ละคู่ต่อไปนี้ จงหาการแทนที่ทั่วไปที่สุดที่มี (Most general unifier)</p>
+          <ol>
+            <li>\(P(A,B,B), P(x,y,z)\)</li>
+            <li>\(Q(y, G(A, B)), Q(G(x, x), y)\)</li>
+            <li>\(Older(Father(y), y),  Older(Father(x), John)\)</li>
+            <li>\(Knows(Father(y), y), Knows(x, x)\)</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz No.2 -->
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            Quiz No.2
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>จงเขียนประโยคต่อไปนี้ให้อยู่ในรูปตรรกศาสตร์อันดับหนึ่งที่เหมาะสมกับการใช้กับกฎ Generalized Modus Ponens ต่อไป</p>
+          <ol>
+            <li>Horses, cows, and pigs are mammals.</li>
+            <li>An offspring of a horse is a horse.</li>
+            <li>Bluebeard is a horse.</li>
+            <li>Charlie is Bluebeard’s offspring.</li>
+            <li>Offspring and parent are inverse relations.</li>
+            <li>Every mammal has a parent.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz No.3 -->
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Quiz No.3
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+
+{% endblock %}

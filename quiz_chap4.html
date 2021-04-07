@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Quiz บทที่ 4{% endblock %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{{url_for('index')}}">หน้าแรก</a></li>
+<li class="breadcrumb-item"><a href="{{url_for('lessons')}}">เอกสารประกอบการเรียน</a></li>
+<li class="breadcrumb-item active" aria-current="page">Quiz บทที่ 4</a></li>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1>Quiz บทที่ 4</h1>
+
+  <br>
+
+  <div class="accordion" id="accordionExample">
+
+    <!-- Quiz No.1 -->
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Quiz No.1
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <img src="{{url_for('static',filename='quiz_chap4_no1.png')}}" class="mx-auto d-block" alt="" width="500" height="300px">
+          <br>
+          <p>จงติดตามการปฏิบัติงานของการค้นหาแบบ A* จากปัญหาการเดินทางในโรมาเนีย ซึ่งใช้ \(h_{SLD}\) แล้วแสดงลำดับของ Node ที่ได้รับการพิจารณาตาม Algorithm ที่ใช้ ตั้งแต่ Oradea จนถึง Bucharest</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz No.2 -->
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Quiz No.2
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <p>การใช้ Hill-climbing ในปัญหา 8-puzzle ถ้ากำหนดสถานะดังนี้</p>
+          <br>
+          <img src="{{url_for('static',filename='quiz_chap4_no2.png')}}" class="mx-auto d-block" alt="" width="300" height="300px">
+          <br>
+          <p>และกำหนด Heuristic \(h\) = ผลรวมระยะห่าง City block distance ทุกแผ่น</p>
+          <ol>
+            <li>จากรูป ค่า \(h\) เป็นเท่าไหร่</li>
+            <li>ถ้าทราบว่า รูปนี้คือสถานะของ 8-puzzle ซึ่งพบ Local maximum (Local minimum) จงอธิบายว่าที่กล่าวมานี้หมายถึงอะไร เกิดขึ้นได้อย่างไร</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+
+{% endblock %}
